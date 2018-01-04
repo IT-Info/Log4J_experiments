@@ -15,7 +15,9 @@ import org.apache.log4j.Logger;
 public class Data extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Logger logger = Logger.getLogger(Data.class);
-
+	
+	public static int no = 0;
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -27,9 +29,9 @@ public class Data extends HttpServlet {
 			System.out.println(key + " : " + e.getProperty(key));
 		}
 		//ata, bari, chole, dhaniya powder
-		for (int i = 20; i < 25; i++) {
-			logger.info("This is an info log entry : " + i);
-			logger.error("This is an error log entry : " + i);
+		for (int i = 1; i < 20; i++) {
+			logger.info("This is an info log entry : " + no);
+			logger.error("This is an error log entry : " + no++);
 		}
 	}
 
