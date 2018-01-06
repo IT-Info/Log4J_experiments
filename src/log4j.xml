@@ -5,8 +5,11 @@
  
 	 <appender name="file" class="org.apache.log4j.rolling.RollingFileAppender">
 	    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
-	        <param name="FileNamePattern" value="logs/myapp.%d{HH-mm}.log.gz" />
+	        <param name="FileNamePattern" value="logs/myapp.%d{HH-mm}(%i).log.gz" />
 	    </rollingPolicy>
+	    <triggeringPolicy class="org.apache.log4j.rolling.SizeBasedTriggeringPolicy">
+	        <param name="MaxFileSize" value="20480" />
+	    </triggeringPolicy>
 	    <layout class="org.apache.log4j.PatternLayout">
 	        <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n" />
 	    </layout>
