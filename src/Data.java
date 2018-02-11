@@ -31,8 +31,11 @@ public class Data extends HttpServlet {
 		//ata, bari, chole, dhaniya powder
 		for (int i = 1; i < 20; i++) {
 			logger.info("This is an info log entry : " + no);
+			logger.debug("This is an info log entry : " + no);
 			logger.error("This is an error log entry : " + no++);
 		}
+		
+		logger.error("Error message");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
