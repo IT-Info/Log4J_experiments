@@ -6,7 +6,7 @@
 	 <appender name="DEBUG" class="org.apache.log4j.rolling.RollingFileAppender">
 	 	<param name="Threshold" value="DEBUG" />
 	    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
-	        <param name="FileNamePattern" value="logs/myapp %d{HH-mm}/myapp.%d{HH-mm}.DEBUG.log.gz" />
+	        <param name="FileNamePattern" value="${webApp}/WEB-INF/Logs/%d{dd-MM-yyyy}/%d{hh a}/%d{hh a}.DEBUG.log.gz" />
 	    </rollingPolicy>
 	    <!-- <triggeringPolicy class="org.apache.log4j.rolling.SizeBasedTriggeringPolicy">
 	        <param name="MaxFileSize" value="20480" />
@@ -19,7 +19,7 @@
 	 <appender name="INFO" class="org.apache.log4j.rolling.RollingFileAppender">
 	 	<param name="Threshold" value="INFO" />
 	    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
-	        <param name="FileNamePattern" value="logs/myapp %d{HH-mm}/myapp.%d{HH-mm}.INFO.log.gz" />
+	        <param name="FileNamePattern" value="${webApp}/WEB-INF/Logs/%d{dd-MM-yyyy}/%d{hh a}/%d{hh a}.INFO.log.gz" />
 	    </rollingPolicy>
 	    <!-- <triggeringPolicy class="org.apache.log4j.rolling.SizeBasedTriggeringPolicy">
 	        <param name="MaxFileSize" value="20480" />
@@ -32,7 +32,7 @@
 	 <appender name="ERROR" class="org.apache.log4j.rolling.RollingFileAppender">
 	 	<param name="Threshold" value="ERROR" />
 	    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
-	        <param name="FileNamePattern" value="logs/myapp %d{HH-mm}/myapp.%d{HH-mm}.ERROR.log.gz" />
+	        <param name="FileNamePattern" value="${webApp}/WEB-INF/Logs/%d{dd-MM-yyyy}/%d{hh a}/%d{hh a}.ERROR.log.gz" />
 	    </rollingPolicy>
 	   <!--  <triggeringPolicy class="org.apache.log4j.rolling.SizeBasedTriggeringPolicy">
 	        <param name="MaxFileSize" value="20480" />
